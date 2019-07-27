@@ -188,3 +188,4 @@ bindsym XF86AudioMute exec --no-startup-id amixer -D pulse set Master 1+ toggle	
 bindsym XF86MonBrightnessUp exec /home/james/scripts/setScreenBright inc 250
 bindsym XF86MonBrightnessDown exec /home/james/scripts/setScreenBright dec 250
 
+bindsym $mod+o exec gnome-screensaver-command -l
