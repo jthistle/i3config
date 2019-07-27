@@ -189,3 +189,5 @@ bindsym XF86MonBrightnessUp exec /home/james/scripts/setScreenBright inc 250
 bindsym XF86MonBrightnessDown exec /home/james/scripts/setScreenBright dec 250
 
 bindsym $mod+o exec gnome-screensaver-command -l
+
+bindsym $mod+Ctrl+P exec kill $(pgrep -f minecraft) 
