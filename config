@@ -167,6 +167,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status --config ~/.i3/i3status.conf
+#        status_command exec ~/.i3/modded_i3.sh #TODO
 }
 
 #######################################################################
@@ -184,6 +185,10 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 5%-	# decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id amixer -D pulse set Master 1+ toggle		# mute sound
 
+bindsym $mod+Ctrl+Shift+O exec --no-startup-id amixer -D pulse sset Master 5%-
+bindsym $mod+Ctrl+Shift+P exec --no-startup-id amixer -D pulse sset Master 5%+
+bindsym $mod+Ctrl+Shift+L exec --no-startup-id amixer -D pulse set Master 1+ toggle
+
 # brightness
 bindsym XF86MonBrightnessUp exec /home/james/scripts/setScreenBright inc 250
 bindsym XF86MonBrightnessDown exec /home/james/scripts/setScreenBright dec 250
@@ -192,4 +197,6 @@ bindsym $mod+o exec gnome-screensaver-command -l
 
 bindsym $mod+Ctrl+P exec kill $(pgrep -f minecraft)
 
-bindsym $mod+Shift+M exec toggleKeyboard 
+bindsym $mod+Shift+M exec toggleKeyboard
+
+bindsym $mod+Shift+ь exec toggleKeyboard
