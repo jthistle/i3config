@@ -212,3 +212,5 @@ bindsym $mod+$alt+P exec cmus-remote -v +10%
 
 
 bindsym $mod+Ctrl+Shift+C move position center
+
+bindsym $mod+$alt+Ctrl+M exec systemctl suspend
