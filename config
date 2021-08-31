@@ -214,3 +214,10 @@ bindsym $mod+$alt+P exec cmus-remote -v +10%
 bindsym $mod+Ctrl+Shift+C move position center
 
 bindsym $mod+$alt+Ctrl+M exec systemctl suspend
+
+# Setup compose key on start
+exec xmodmap -e "keycode 108 = Multi_key"
+
+# Default to tabbed layout 
+workspace_layout tabbed
+
