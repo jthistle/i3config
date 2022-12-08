@@ -11,11 +11,11 @@
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 7 
+#font pango:monospace 7 
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
+font pango:DejaVu Sans Mono 7
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -199,7 +199,7 @@ bindsym $mod+o exec gnome-screensaver-command -l
 
 bindsym $mod+Shift+M exec /home/james/scripts/toggleKeyboard
 
-bindsym $mod+Shift+ь exec /home/james/scripts/toggleKeyboard
+# bindsym $mod+Shift+ь exec /home/james/scripts/toggleKeyboard
 
 bindsym $mod+Ctrl+Shift+Y exec systemctl hibernate
 
@@ -210,6 +210,11 @@ bindsym $mod+$alt+B exec cmus-remote -n
 bindsym $mod+$alt+O exec cmus-remote -v -10%
 bindsym $mod+$alt+P exec cmus-remote -v +10%
 
+bindsym $mod+$alt+D exec /home/james/opt/i3spotifystatus/sendCommand.sh playpause
+bindsym $mod+$alt+F exec /home/james/opt/i3spotifystatus/sendCommand.sh volup
+bindsym $mod+$alt+S exec /home/james/opt/i3spotifystatus/sendCommand.sh voldown
+bindsym $mod+$alt+G exec /home/james/opt/i3spotifystatus/sendCommand.sh next
+bindsym $mod+$alt+A exec /home/james/opt/i3spotifystatus/sendCommand.sh prev
 
 bindsym $mod+Ctrl+Shift+C move position center
 
@@ -220,4 +225,10 @@ exec xmodmap -e "keycode 108 = Multi_key"
 
 # Default to tabbed layout 
 workspace_layout tabbed
+
+default_border pixel 1
+default_floating_border pixel 1
+
+# Uh
+bindsym $mod+Ctrl+V exec /home/james/opt/sources/gazou/build/gazou -v
 
