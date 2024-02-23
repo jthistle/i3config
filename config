@@ -17,6 +17,8 @@
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 font pango:DejaVu Sans Mono 7
 
+exec xrandr --output DVI-D-0 --mode 1920x1080 --dpi 90 --rate 60
+
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # The font above is very space-efficient, that is, it looks good, sharp and
@@ -231,4 +233,15 @@ default_floating_border pixel 1
 
 # Uh
 bindsym $mod+Ctrl+V exec /home/james/opt/sources/gazou/build/gazou -v
+
+# compositor
+exec picom &
+
+# mouse accel
+exec --no-startup-id xinput --set-prop "ckb1: CORSAIR HARPOON RGB PRO Gaming Mouse vM" "libinput Accel Speed" 0
+exec --no-startup-id xinput --set-prop "ckb1: CORSAIR HARPOON RGB PRO Gaming Mouse vM" "libinput Accel Profile Enabled" 0 1
+
+# keyboard rate repeat
+exec --no-startup-id xset r rate 200 35
+
 
